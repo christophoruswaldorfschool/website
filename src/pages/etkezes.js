@@ -232,4 +232,121 @@ const Quote = ({ children }) => {
 
     export default EtkezesPageTemplate
 
-    export const pageQuery = graphql
+    export const pageQuery = graphql`
+    query etkezesPageQuery {
+      contentfulPage(slug: { eq: "etkezes" }) {
+        lead {
+          lead
+        }
+        title
+        firstContentTitle
+        firstContent {
+          raw
+          references {
+            ... on ContentfulAsset {
+              contentful_id
+              __typename
+              gatsbyImage(width: 340, placeholder: BLURRED, aspectRatio: 1)
+              description
+              title
+            }
+          }
+        }
+  
+        relatedContentTitle
+        secondContentTitle
+        secondContent {
+          raw
+          references {
+            ... on ContentfulAsset {
+              contentful_id
+              __typename
+              gatsbyImage(height: 230, placeholder: BLURRED, aspectRatio: 1)
+              description
+              title
+            }
+          }
+        }
+        relatedContent {
+          ... on Node {
+            ... on ContentfulPost {
+              id
+              title
+              lead {
+                lead
+              }
+              date
+              slug
+              internal {
+                type
+              }
+            }
+            ... on ContentfulNews {
+              id
+              title
+              lead {
+                lead
+              }
+              date
+              slug
+              internal {
+                type
+              }
+            }
+            ... on ContentfulJob {
+              id
+              title
+              lead {
+                lead
+              }
+              date
+              slug
+              internal {
+                type
+              }
+            }
+            ... on ContentfulPage {
+              id
+              title
+              lead {
+                lead
+              }
+              date
+              slug
+              internal {
+                type
+              }
+            }
+          }
+        }
+        peopleListTitle
+        peopleList {
+          bio {
+            raw
+          }
+          image {
+            gatsbyImage(placeholder: BLURRED, cropFocus: TOP, width: 840)
+          }
+          name
+          slug
+          internal {
+            type
+          }
+        }
+        additionalPeopleTitle
+        additionalPeople {
+          bio {
+            raw
+          }
+          image {
+            gatsbyImage(placeholder: BLURRED, cropFocus: TOP, width: 840)
+          }
+          name
+          slug
+          internal {
+            type
+          }
+        }
+      }
+    }
+  `
