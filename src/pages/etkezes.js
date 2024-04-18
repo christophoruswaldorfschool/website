@@ -229,3 +229,7 @@ const Quote = ({ children }) => {
   )
 
     }
+
+    export default EtkezesPageTemplate
+
+    export const pageQuery = graphql
