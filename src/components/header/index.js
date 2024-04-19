@@ -127,6 +127,27 @@ const Header = ({ activeMenu, searchEnabled = false }) => (
           >
             <Link to="/etkezes">Étkezés</Link>
           </li>
+          <ul className={css.subMenu}>
+              <li>
+                <Link to="/etkezes#rendeles">Menük</Link>
+              </li>
+              <li>
+                <Link to="/etkezes#adminisztracio">Pedagógiánk</Link>
+              </li>
+              <li>
+                <Link to="/etkezes#amathea">Pedagógusaink</Link>
+              </li>
+              <li>
+                <Link to="/etkezes#menuk">Kollégáink</Link>
+              </li>
+              {/*
+              <li>
+                <a href="/iskola">Átjelentkezés</a>
+              </li>
+              <li>
+                <a href="/iskola">Felvételi</a>
+              </li> */}
+            </ul>
         
           <li
             className={classNames(css.menuItem, {

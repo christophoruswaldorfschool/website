@@ -103,9 +103,9 @@ const Quote = ({ children }) => {
           <>
             <SectionTitle
               title={relatedContentTitle}
-              align="right"
+              align="left"
               color="lilac"
-              anchor="aktualitasok"
+              anchor="menuk"
             />
 
             <ContentList>
@@ -115,7 +115,7 @@ const Quote = ({ children }) => {
                   <ContentBox
                     title={item.title}
                     type="small"
-                    color="lilac"
+                    color="orange"
                     buttonText="Tovább"
                     buttonLink={getInternalPath(item)}
                     key={item.slug}
@@ -131,99 +131,49 @@ const Quote = ({ children }) => {
 
         <SectionTitle
           title={firstContentTitle}
-          align="right"
+          align="left"
           color="lilac"
-          anchor="pedagogiank"
+          anchor="rendeles"
         />
 
         <div className={richText.content}>
           {renderRichText(firstContent, introRichTextOptions)}
         </div>
 
-{/*     <Separator />
-        {peopleList && (
-          <>
-            <SectionTitle
-              title={peopleListTitle}
-              align="right"
-              color="blue"
-              anchor="pedagogusaink"
-            />
- 
-            <ContentList type="full">
-              {peopleList
-                .filter((i) => i.name && i.slug && i.image && i.bio?.raw)
-                .map((item) => (
-                  <ContentBox
-                    title={item.name}
-                    type="full"
-                    color="blue"
-                    buttonText="Tovább"
-                    buttonLink={getInternalPath(item)}
-                    key={item.slug}
-                    image={item.image}
-                  >
-                    {truncate(
-                      documentToPlainTextString(JSON.parse(item.bio.raw)),
-                      840
-                    )}
-                  </ContentBox>
-                ))}
-            </ContentList>
-
-            <Separator />
-          </>
-        )}
-
-        {additionalPeople && (
-          <>
-            <SectionTitle
-              title={additionalPeopleTitle}
-              align="left"
-              color="blue"
-              anchor="kollegaink"
-            />
-
-            <ContentList type="full">
-              {additionalPeople
-                .filter((i) => i.name && i.slug && i.image && i.bio?.raw)
-                .map((item) => (
-                  <ContentBox
-                    title={item.name}
-                    type="full"
-                    color="blue"
-                    buttonText="Tovább"
-                    buttonLink={getInternalPath(item)}
-                    key={item.slug}
-                    image={item.image}
-                  >
-                    {truncate(
-                      documentToPlainTextString(JSON.parse(item.bio.raw)),
-                      840
-                    )}
-                  </ContentBox>
-                ))}
-            </ContentList>
-
-            <Separator />
-          </>
-        )}
+    <Separator />
 
         {secondContent && (
           <>
             <SectionTitle
               title={secondContentTitle}
-              align="right"
-              color="lilac"
-              anchor="iskolakertunk"
+              align="left"
+              color="red"
+              anchor="adminisztracio"
             />
 
             <div className={richText.content}>
-              {renderRichText(secondContent, gardenRichTextOptions)}
+              {renderRichText(secondContent, introRichTextOptions)}
             </div>
           </>
         )}
-       */}
+
+    <Separator />
+
+        {thirdContent && (
+          <>
+            <SectionTitle
+              title={thirdContentTitle}
+              align="left"
+              color="red"
+              anchor="amathea"
+            />
+
+            <div className={richText.content}>
+              {renderRichText(thirdContent, introRichTextOptions)}
+            </div>
+          </>
+        )}
+       
       </Content>
     </Layout>
   )
