@@ -129,16 +129,16 @@ const Header = ({ activeMenu, searchEnabled = false }) => (
           
               <ul className={css.subMenu}>
               <li>
-                <Link to="/etkezes#rendeles">Menük</Link>
+                <Link to="/etkezes#rendeles">Ételrendelés</Link>
               </li>
               <li>
-                <Link to="/etkezes#adminisztracio">Pedagógiánk</Link>
+                <Link to="/etkezes#adminisztracio">Lemondás és Újraigénylés</Link>
               </li>
               <li>
-                <Link to="/etkezes#amathea">Pedagógusaink</Link>
+                <Link to="/etkezes#amathea">Amathea bemutatkozó levél</Link>
               </li>
               <li>
-                <Link to="/etkezes#menuk">Kollégáink</Link>
+                <Link to="/etkezes#menuk">Menük</Link>
               </li>
               {/*
               <li>
