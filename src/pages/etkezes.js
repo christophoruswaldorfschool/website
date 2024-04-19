@@ -117,7 +117,7 @@ const Quote = ({ children }) => {
                   <ContentBox
                     title={item.title}
                     type="small"
-                    color="orange"
+                    color="gold"
                     buttonText="Tovább"
                     buttonLink={getInternalPath(item)}
                     key={item.slug}
@@ -134,7 +134,7 @@ const Quote = ({ children }) => {
         <SectionTitle
           title={firstContentTitle}
           align="left"
-          color="lilac"
+          color="gold"
           anchor="rendeles"
         />
 
@@ -149,7 +149,7 @@ const Quote = ({ children }) => {
             <SectionTitle
               title={secondContentTitle}
               align="left"
-              color="red"
+              color="gold"
               anchor="adminisztracio"
             />
 
@@ -166,7 +166,7 @@ const Quote = ({ children }) => {
             <SectionTitle
               title={thirdContentTitle}
               align="left"
-              color="red"
+              color="lilac"
               anchor="amathea"
             />
 

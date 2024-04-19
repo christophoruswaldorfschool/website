@@ -126,8 +126,8 @@ const Header = ({ activeMenu, searchEnabled = false }) => (
             })}
           >
             <Link to="/etkezes">Étkezés</Link>
-          </li>
-          <ul className={css.subMenu}>
+          
+              <ul className={css.subMenu}>
               <li>
                 <Link to="/etkezes#rendeles">Menük</Link>
               </li>
@@ -148,7 +148,8 @@ const Header = ({ activeMenu, searchEnabled = false }) => (
                 <a href="/iskola">Felvételi</a>
               </li> */}
             </ul>
-        
+          </li>
+
           <li
             className={classNames(css.menuItem, {
               [css.selected]: activeMenu === 'contact',
