@@ -49,6 +49,8 @@ const Quote = ({ children }) => {
       firstContent,
       secondContentTitle,
       secondContent,
+      thirdContentTitle,
+      thirdContent,
       peopleListTitle,
       peopleList,
       additionalPeopleTitle,
@@ -56,7 +58,7 @@ const Quote = ({ children }) => {
     } = data.contentfulPage
 
     const gardenParagprahIndexer = createImageIndexer()
-  const gardenImageIndexer = createImageIndexer(2)
+    const gardenImageIndexer = createImageIndexer(2)
 
   const introRichTextOptions = {
     renderNode: {
@@ -203,7 +205,6 @@ const Quote = ({ children }) => {
           }
         }
   
-        relatedContentTitle
         secondContentTitle
         secondContent {
           raw
@@ -217,6 +218,24 @@ const Quote = ({ children }) => {
             }
           }
         }
+
+        thirdContentTitle
+        thirdContent {
+          raw
+          references {
+            ... on ContentfulAsset {
+              contentful_id
+              __typename
+              gatsbyImage(height: 230, placeholder: BLURRED, aspectRatio: 1)
+              description
+              title
+            }
+          }
+        }
+
+
+
+        relatedContentTitle
         relatedContent {
           ... on Node {
             ... on ContentfulPost {
