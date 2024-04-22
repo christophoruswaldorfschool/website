@@ -99,14 +99,14 @@ const Quote = ({ children }) => {
   return (
     <Layout menu="food">
       <Seo title={title} description={lead} />
-      <Hero title={title} lead={lead} color={'lilac'} />
+      <Hero title={title} lead={lead} color={'ocean'} />
       <Content>
         {relatedContent && (
           <>
             <SectionTitle
               title={relatedContentTitle}
               align="left"
-              color="lilac"
+              color="ocean"
               anchor="menuk"
             />
 
@@ -117,7 +117,7 @@ const Quote = ({ children }) => {
                   <ContentBox
                     title={item.title}
                     type="small"
-                    color="gold"
+                    color="ocean"
                     buttonText="Tovább"
                     buttonLink={getInternalPath(item)}
                     key={item.slug}
@@ -134,7 +134,7 @@ const Quote = ({ children }) => {
         <SectionTitle
           title={firstContentTitle}
           align="left"
-          color="gold"
+          color="ocean"
           anchor="rendeles"
         />
 
@@ -149,7 +149,7 @@ const Quote = ({ children }) => {
             <SectionTitle
               title={secondContentTitle}
               align="left"
-              color="gold"
+              color="ocean"
               anchor="adminisztracio"
             />
 
@@ -166,7 +166,7 @@ const Quote = ({ children }) => {
             <SectionTitle
               title={thirdContentTitle}
               align="left"
-              color="lilac"
+              color="ocean"
               anchor="amathea"
             />
 
