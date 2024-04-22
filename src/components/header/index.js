@@ -80,6 +80,15 @@ const Header = ({ activeMenu, searchEnabled = false }) => (
           >
             <Link to="/gondolatok">Gondolatok</Link>
           </li>
+          
+          <li
+            className={classNames(css.menuItem, {
+              [css.selected]: activeMenu === 'podium',
+            })}
+          >
+            <Link to="/podium">Pódium</Link>
+          </li>
+           
           <li
             className={classNames(css.menuItem, {
               [css.selected]: activeMenu === 'images',
