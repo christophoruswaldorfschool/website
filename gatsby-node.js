@@ -159,6 +159,28 @@ const createNews = async (graphql, createPage, reporter) => runQuery(
   createPage
 )
 
+
+const createEloadas = async (graphql, createPage, reporter) => runQuery(
+  {
+    query: `
+      {
+        collection: allContentfulEloadas {
+          nodes {
+            slug
+            contentful_id
+          }
+        }
+      }
+    `,
+    errorMessage: `There was an error loading news pages`,
+    rootPath: 'hirek',
+    component: path.resolve('./src/templates/eloadas.js'),
+  },
+  graphql,
+  reporter,
+  createPage
+)
+
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
@@ -169,6 +191,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       createPeople(graphql, createPage, reporter),
       createGalleries(graphql, createPage, reporter),
       createNews(graphql, createPage, reporter),
+      createEloadas(graphql, createPage, reporter),
     ]);
   } catch(e) {
     console.log(e)
