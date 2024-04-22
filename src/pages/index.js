@@ -273,6 +273,17 @@ export const pageQuery = graphql`
             internal {
               type
             }
+            ... on ContentfulEloadas {
+              id
+              title
+              lead {
+                lead
+              }
+              date
+              slug
+              internal {
+                type
+           }
           }
         }
       }
@@ -320,6 +331,17 @@ export const pageQuery = graphql`
               type
             }
           }
+          ... on ContentfulEloadas {
+            id
+            title
+            lead {
+              lead
+            }
+            slug
+            internal {
+              type
+            }
+          }
         }
       }
       posts {
@@ -337,6 +359,21 @@ export const pageQuery = graphql`
           type
         }
       }
+      eloadas {
+        slug
+        title
+        content {
+          raw
+        }
+        eloadasPicture {
+          gatsbyImage(placeholder: BLURRED, width: 850)
+          description
+          title
+        }
+        internal {
+          type
+        }
+      }  
       events {
         thumbnails: images {
           title

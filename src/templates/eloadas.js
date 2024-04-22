@@ -29,15 +29,15 @@ const PodiumPageTemplate = ({ data }) => {
 
   return (
     <Layout menu="podium">
-      <Seo title={EloadasTitle} description={lead?.lead ?? ''} />
-      <Hero title={EloadasTitle} lead={lead?.lead ?? ' '} color="ocean" />
+      <Seo title={eloadasTitle} description={lead?.lead ?? ''} />
+      <Hero title={eloadasTitle} lead={lead?.lead ?? ' '} color="ocean" />
       <Content>
         <div className={classNames(richText.content, richText.contentPage)}>
-          {EloadasPicture && (
+          {eloadasPicture && (
             <GatsbyImage
-              image={EloadasPicture.gatsbyImage}
-              alt={EloadasPicture.alt}
-              title={EloadasPicture.title}
+              image={eloadasPicture.gatsbyImage}
+              alt={eloadasPicture.alt}
+              title={eloadasPicture.title}
               className={classNames(richText.image, richText.image_left)}
             />
           )}
@@ -70,7 +70,7 @@ export const pageQuery = graphql`
       }
       slug
       title
-      EloadasPicture {
+      eloadasPicture {
         gatsbyImage(width: 450, placeholder: BLURRED)
         title
         alt: description
