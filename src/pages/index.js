@@ -273,17 +273,6 @@ export const pageQuery = graphql`
             internal {
               type
             }
-            ... on ContentfulEloadas {
-              id
-              title
-              lead {
-                lead
-              }
-              date
-              slug
-              internal {
-                type
-           }
           }
         }
       }
@@ -321,17 +310,6 @@ export const pageQuery = graphql`
             }
           }
           ... on ContentfulJob {
-            id
-            title
-            lead {
-              lead
-            }
-            slug
-            internal {
-              type
-            }
-          }
-          ... on ContentfulEloadas {
             id
             title
             lead {
