@@ -337,21 +337,6 @@ export const pageQuery = graphql`
           type
         }
       }
-      eloadas {
-        slug
-        title
-        content {
-          raw
-        }
-        eloadasPicture {
-          gatsbyImage(placeholder: BLURRED, width: 850)
-          description
-          title
-        }
-        internal {
-          type
-        }
-      }  
       events {
         thumbnails: images {
           title
