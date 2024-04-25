@@ -67,7 +67,7 @@ export const pageQuery = graphql`
 
     }
     allContentfulEloadas(sort: { fields: date, order: DESC }) {
-      eloadasok: nodes {
+      podium: nodes {
         date
         slug
         title
