@@ -55,7 +55,7 @@ export default PodiumPageTemplate
 
 export const pageQuery = graphql`
   query EloadasPageQuery {
-    page: contentfulPage(slug: { eq: "podium" }) {
+    page: contentfulPage(slug: { eq: "eloadasok" }) {
       
       lead {
         lead
