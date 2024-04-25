@@ -27,7 +27,7 @@ const EloadasPageTemplate = ({ data }) => {
   }
 
   return (
-    <Layout menu="posts">
+    <Layout menu="podium">
       <Seo title={eloadasTitle} description={lead?.lead ?? ''} />
       <Hero title={eloadasTitle} lead={lead?.lead ?? ' '} color="gold" />
       <Content>
@@ -57,7 +57,16 @@ export const pageQuery = graphql`
         }
         content {
           raw
+          references {
+            ... on ContentfulAsset {
+              contentful_id
+              __typename
+              gatsbyImage(width: 450, placeholder: BLURRED)
+              description
+              title
             }
+          }
+        }
         slug
         title
         eloadasPicture {

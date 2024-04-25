@@ -17,7 +17,7 @@ const PodiumPageTemplate = ({ data }) => {
       lead: { lead },
       relatedContentTitle,
     },
-    allContentfulEloadas: { eloadasok },
+    allContentfulEloadas: { posts },
   } = data
 
   return (
@@ -27,7 +27,7 @@ const PodiumPageTemplate = ({ data }) => {
       <Content>
         <SectionTitle title={relatedContentTitle} align="right" color="gold" />
         <ContentList type="full">
-          {eloadasok
+          {posts
             .filter((item) => !!item.content)
             .map((item) => (
               <ContentBox
