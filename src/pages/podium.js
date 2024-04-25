@@ -1,4 +1,4 @@
-import Content from '../components/content'
+/*import Content from '../components/content'
 import ContentBox from '../components/content-box'
 import ContentList from '../components/contentlist'
 import Hero from '../components/hero'
@@ -17,7 +17,7 @@ const PodiumPageTemplate = ({ data }) => {
       lead: { lead },
       relatedContentTitle,
     },
-    allContentfulPost: { posts },
+     allContentfulPost: { posts }, 
   } = data
 
   return (
@@ -76,4 +76,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+` */
