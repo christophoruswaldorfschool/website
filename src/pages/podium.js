@@ -17,7 +17,7 @@ const PodiumPageTemplate = ({ data }) => {
       lead: { lead },
       relatedContentTitle,
     },
-    allContentfulEloadas: { posts },
+    allContentfulEloadas: { eloadasok },
   } = data
 
   return (
@@ -27,7 +27,7 @@ const PodiumPageTemplate = ({ data }) => {
       <Content>
         <SectionTitle title={relatedContentTitle} align="right" color="gold" />
         <ContentList type="full">
-          {posts
+          {eloadasok
             .filter((item) => !!item.content)
             .map((item) => (
               <ContentBox
@@ -67,7 +67,7 @@ export const pageQuery = graphql`
 
     }
     allContentfulEloadas(sort: { fields: date, order: DESC }) {
-      podium: nodes {
+      eloadasok: nodes {
         date
         slug
         title
