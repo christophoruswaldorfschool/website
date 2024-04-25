@@ -56,14 +56,9 @@ export const pageQuery = graphql`
         lead
       }
       content {
+        
         raw
-        references {
-          ... on ContentfulAsset {
-            contentful_id
-            __typename
-            gatsbyImage(width: 450, placeholder: BLURRED)
-            description
-            title
+
           }
         }
       }
