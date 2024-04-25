@@ -50,25 +50,21 @@ const EloadasPageTemplate = ({ data }) => {
 export default EloadasPageTemplate
 
 export const pageQuery = graphql`
-  query EloadasBySlug($slug: String!) {
-    contentfulEloadas(slug: { eq: $slug }) {
-      lead {
-        lead
-      }
-      content {
-        
-        raw
-
-          }
+    query EloadasBySlug($slug: String!) {
+      contentfulEloadas(slug: { eq: $slug }) {
+        lead {
+          lead
+        }
+        content {
+          raw
+            }
+        slug
+        title
+        eloadasPicture {
+          gatsbyImage(width: 450, placeholder: BLURRED)
+          title
+          alt: description
         }
       }
-      slug
-      title
-      eloadasPicture {
-        gatsbyImage(width: 450, placeholder: BLURRED)
-        title
-        alt: description
-      }
     }
-  }
 `
