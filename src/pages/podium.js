@@ -17,7 +17,7 @@ const PodiumPageTemplate = ({ data }) => {
       lead: { lead },
       relatedContentTitle,
     },
-    allContentfulPost: { posts },
+    allContentfulEloadas: { posts },
   } = data
 
   return (
@@ -56,11 +56,13 @@ export default PodiumPageTemplate
 export const pageQuery = graphql`
   query EloadasPageQuery {
     page: contentfulPage(slug: { eq: "podium" }) {
-      lead {
-        lead
-      }
+      
+      lead 
+      
       title
+      
       relatedContentTitle
+
     }
     allContentfulEloadas(sort: { fields: date, order: DESC }) {
       posts: nodes {
