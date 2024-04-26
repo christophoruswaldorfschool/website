@@ -23,7 +23,7 @@ const PodiumPageTemplate = ({ data }) => {
   return (
     <Layout menu="podium">
       <Seo title={title} description={lead} />
-      <Hero title={title} lead={lead} color="peach" />
+      <Hero title={title} lead={lead} color="pink" />
       <Content>
         <SectionTitle title={relatedContentTitle} align="right" color="peach" />
         <ContentList type="full">
