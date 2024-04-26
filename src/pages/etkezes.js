@@ -9,19 +9,19 @@ import Separator from '../components/separator'
 import * as richText from '../richtext.module.scss'
 import getInternalPath from '../utils/getInternalPath'
 import richTextImage, {
-  createImageIndexer,
-  embedImageRenderer,
+ /* createImageIndexer,
+  embedImageRenderer,*/
 } from '../utils/richTextImage'
-import * as css from './etkezes.module.scss'
-import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer'
+/*import * as css from './etkezes.module.scss'*/
+/*import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer'*/
 import { BLOCKS } from '@contentful/rich-text-types'
 import { graphql } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
+/*import { StaticImage } from 'gatsby-plugin-image'*/
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import React from 'react'
-import truncate from 'truncate'
+/*import truncate from 'truncate'*/
 
-const Quote = ({ children }) => {
+/*const Quote = ({ children }) => {
     const data = React.Children.toArray(children)
   
     return (
@@ -37,7 +37,7 @@ const Quote = ({ children }) => {
         </figure>
       </div>
     )
-  }
+  } */
 
   const EtkezesPageTemplate = ({ data }) => {
     const {
@@ -51,14 +51,14 @@ const Quote = ({ children }) => {
       secondContent,
       thirdContentTitle,
       thirdContent,
-      peopleListTitle,
+      /*peopleListTitle,
       peopleList,
       additionalPeopleTitle,
-      additionalPeople,
+      additionalPeople, */
     } = data.contentfulPage
 
-    const gardenParagprahIndexer = createImageIndexer()
-    const gardenImageIndexer = createImageIndexer(2)
+    /*const gardenParagprahIndexer = createImageIndexer()
+    const gardenImageIndexer = createImageIndexer(2) */
 
   const introRichTextOptions = {
     renderNode: {
@@ -66,7 +66,7 @@ const Quote = ({ children }) => {
     },
   }
 
-  const gardenRichTextOptions = {
+  /*const gardenRichTextOptions = {
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node, children, ...args) => {
         if (gardenParagprahIndexer() === 1) {
@@ -94,19 +94,19 @@ const Quote = ({ children }) => {
       },
       [BLOCKS.QUOTE]: (node, children) => <Quote>{children}</Quote>,
     },
-  }
+  } */
 
   return (
     <Layout menu="food">
       <Seo title={title} description={lead} />
-      <Hero title={title} lead={lead} color={'ocean'} />
+      <Hero title={title} lead={lead} color={'gold'} />
       <Content>
         {relatedContent && (
           <>
             <SectionTitle
               title={relatedContentTitle}
               align="left"
-              color="ocean"
+              color="gold"
               anchor="menuk"
             />
 
@@ -117,7 +117,7 @@ const Quote = ({ children }) => {
                   <ContentBox
                     title={item.title}
                     type="small"
-                    color="ocean"
+                    color="gold"
                     buttonText="Tovább"
                     buttonLink={getInternalPath(item)}
                     key={item.slug}
@@ -134,7 +134,7 @@ const Quote = ({ children }) => {
         <SectionTitle
           title={firstContentTitle}
           align="left"
-          color="ocean"
+          color="gold"
           anchor="rendeles"
         />
 
@@ -149,7 +149,7 @@ const Quote = ({ children }) => {
             <SectionTitle
               title={secondContentTitle}
               align="left"
-              color="ocean"
+              color="gold"
               anchor="adminisztracio"
             />
 
@@ -166,7 +166,7 @@ const Quote = ({ children }) => {
             <SectionTitle
               title={thirdContentTitle}
               align="left"
-              color="ocean"
+              color="gold"
               anchor="amathea"
             />
 
