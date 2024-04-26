@@ -130,7 +130,7 @@ const createEloadas = async (graphql, createPage, reporter) => runQuery(
       }
     `,
     errorMessage: `There was an error loading performances`,
-    rootPath: 'podium',
+    rootPath: 'eloadasok',
     component: path.resolve('./src/templates/eloadas.js'),
   },
   graphql,
