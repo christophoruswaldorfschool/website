@@ -23,9 +23,9 @@ const PodiumPageTemplate = ({ data }) => {
   return (
     <Layout menu="podium">
       <Seo title={title} description={lead} />
-      <Hero title={title} lead={lead} color="brick" />
+      <Hero title={title} lead={lead} color="peach" />
       <Content>
-        <SectionTitle title={relatedContentTitle} align="right" color="brick" />
+        <SectionTitle title={relatedContentTitle} align="right" color="peach" />
         <ContentList type="full">
           {eloadasok
             .filter((item) => !!item.content)
