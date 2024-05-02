@@ -173,7 +173,7 @@ const IndexPage = ({ data }) => {
 
         <SectionTitle title="Események" align="left" color="green" />
 
-        <ContentList
+        {/* <ContentList }
           type="full"
           moreLink="/galeria"
           moreLabel="Még több esemény"
@@ -184,7 +184,7 @@ const IndexPage = ({ data }) => {
             images={events.images.slice(0, 6)}
             onShow={(i) => showImage(i, events.images)}
           />
-        </ContentList>
+        { </ContentList>  */}
 
         <Separator />
 
