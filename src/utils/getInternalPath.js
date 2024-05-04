@@ -17,15 +17,11 @@ const getInternalPath = (node) => {
       category = 'galeria/'
       break
     case 'ContentfulPage':
-      category = ''
     default:
   }
-  if (category = '') {
-    return `/${slug}`
-  }
-  else {
-    return `/${category}${node.slug}`
-  }
+    
+  return `/${category}${node.slug}`
+  
 }
 
 export default getInternalPath
