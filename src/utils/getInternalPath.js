@@ -17,6 +17,7 @@ const getInternalPath = (node) => {
       category = 'galeria/'
       break
     case 'ContentfulPage':
+      category = ''
     default:
   }
 
