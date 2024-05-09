@@ -20,7 +20,7 @@ const getInternalPath = (node) => {
     default:
   }
 
-  return `/${category}${node.title}`
+  return `/${category}${node.target}`
 }
 
 export default getInternalPath
