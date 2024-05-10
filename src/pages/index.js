@@ -173,7 +173,8 @@ const IndexPage = ({ data }) => {
 
         <SectionTitle title="Események" align="left" color="green" />
 
-        {/* <ContentList>
+        {/* <ContentList>}
+        
           type="full"
           moreLink="/galeria"
           moreLabel="Még több esemény"
@@ -184,7 +185,8 @@ const IndexPage = ({ data }) => {
             images={events.images.slice(0, 6)}
             onShow={(i) => showImage(i, events.images)}
           />
-        /* </ContentList>  */}
+
+        { </ContentList>  */}
 
         <Separator />
 
@@ -337,6 +339,19 @@ export const pageQuery = graphql`
           type
         }
       }
+      #events {
+      #  thumbnails: images {
+      #    title
+      #    alt: description
+      #    gatsbyImage(aspectRatio: 1, height: 300, placeholder: BLURRED)
+      #  }
+      #  images {
+      #    title
+      #    alt: description
+      #
+      #gatsbyImage(layout: FULL_WIDTH, width: 1200, placeholder: BLURRED)
+      #  }
+      #}
     }
     contentfulAsset(title: { eq: "SZAKMAI BESZÁMOLÓ - Erdély 2023" }) {
       file {

@@ -19,8 +19,9 @@ const getInternalPath = (node) => {
     case 'ContentfulPage':
     default:
   }
-
+    
   return `/${category}${node.slug}`
+  
 }
 
 export default getInternalPath
