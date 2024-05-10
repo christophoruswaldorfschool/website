@@ -42,7 +42,7 @@ const NewsListPageTemplate = ({ data }) => {
                 type="full"
                 color="peach"
                 buttonText="Tovább"
-                buttonLink={`/allasok/${item.slug}`}
+                buttonLink={getInternalPath(item)}
                 key={item.slug}
               >
                 {item?.lead?.lead ?? renderRichText(item.body, richTextOptions)}

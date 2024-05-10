@@ -5,7 +5,7 @@ const getInternalPath = (node) => {
       category = 'allasok/'
       break
     case 'ContentfulNews':
-      category = 'allasok/'
+      category = 'hirek/'
       break
     case 'ContentfulPost':
       category = 'gondolatok/'
