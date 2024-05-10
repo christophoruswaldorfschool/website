@@ -1,0 +1,59 @@
+@import '../colors.scss';
+@import '../fonts.scss';
+
+.quote {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  margin-block: 0;
+  margin-inline: 0;
+  margin-bottom: 1rem;
+  clear: both;
+  transform: translateY(-6rem);
+
+  @media screen and (max-width: 75rem) {
+    transform: translateY(0);
+  }
+
+  figure {
+    width: 42rem;
+    height: 28rem;
+    background-image: url('../static/iskolakert-quote.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    blockquote, figcaption {
+      width: 14rem;
+      font-family: $heading-font;
+      color: $color-purple;
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    blockquote {
+      text-align: center;
+
+      p {
+        margin-bottom: 0;
+
+        i {
+          font-style: normal;
+        }
+      }
+    }
+
+    figcaption {
+      text-align: right;
+      font-family: $primary-font;
+      font-size: .8rem;
+    }
+  }
+
+}

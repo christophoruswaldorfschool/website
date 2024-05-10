@@ -80,6 +80,15 @@ const Header = ({ activeMenu, searchEnabled = false }) => (
           >
             <Link to="/gondolatok">Gondolatok</Link>
           </li>
+          
+          <li
+            className={classNames(css.menuItem, {
+              [css.selected]: activeMenu === 'podium',
+            })}
+          >
+            <Link to="/podium">Pódium</Link>
+          </li>
+           
           <li
             className={classNames(css.menuItem, {
               [css.selected]: activeMenu === 'images',
@@ -119,6 +128,37 @@ const Header = ({ activeMenu, searchEnabled = false }) => (
           >
             <a href="/jelentkezes">Jelentkezés</a>
           </li>
+
+          <li
+            className={classNames(css.menuItem, {
+              [css.selected]: activeMenu === 'food',
+            })}
+          >
+            <Link to="/etkezes">Étkezés</Link>
+          
+              <ul className={css.subMenu}>
+              <li>
+                <Link to="/etkezes#rendeles">Ételrendelés</Link>
+              </li>
+              <li>
+                <Link to="/etkezes#adminisztracio">Lemondás és Újraigénylés</Link>
+              </li>
+              <li>
+                <Link to="/etkezes#amathea">Amathea bemutatkozó levél</Link>
+              </li>
+              <li>
+                <Link to="/etkezes#menuk">Menük</Link>
+              </li>
+              {/*
+              <li>
+                <a href="/iskola">Átjelentkezés</a>
+              </li>
+              <li>
+                <a href="/iskola">Felvételi</a>
+              </li> */}
+            </ul>
+          </li>
+
           <li
             className={classNames(css.menuItem, {
               [css.selected]: activeMenu === 'contact',
