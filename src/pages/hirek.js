@@ -58,7 +58,7 @@ export default NewsListPageTemplate
 
 export const pageQuery = graphql`
   query NewsListPageQuery {
-    page: contentfulPage(slug: { eq: "hirek" }) {
+    page: contentfulPage(slug: { eq: "allasok" }) {
       lead {
         lead
       }
