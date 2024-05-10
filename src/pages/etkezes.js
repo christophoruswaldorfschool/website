@@ -119,7 +119,7 @@ import React from 'react'
                     type="small"
                     color="gold"
                     buttonText="Tovább"
-                    buttonLink={getInternalPath(item)}
+                    buttonLink={`/hirek/${item.slug}`}
                     key={item.slug}
                   >
                     {item.lead?.lead ?? ''}
