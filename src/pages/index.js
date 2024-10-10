@@ -52,7 +52,7 @@ const IndexPage = ({ data }) => {
     <Layout menu="">
       <Seo />
       <Hero color="warmRainbow">
-        {heroItems
+        {/*heroItems
           .filter((h) => h.slug && h.title && h.lead?.lead && h.date)
           .map((item) => (
             <HeroPage
@@ -63,7 +63,7 @@ const IndexPage = ({ data }) => {
               buttonLink={getInternalPath(item)}
               buttonText="Tovább"
             />
-          ))}
+          ))*/}
       </Hero>
       <Content>
         <SectionTitle title="Üdvözlünk!" align="right" color="peach" />
@@ -226,58 +226,58 @@ export default IndexPage
 export const pageQuery = graphql`
   query MainPageQuery {
     contentfulMainPage(id: { eq: "7ab4d2ae-3a70-579f-8255-70e8d5d75041" }) {
-      heroItems {
-        ... on Node {
-          ... on ContentfulPost {
-            id
-            title
-            lead {
-              lead
-            }
-            date
-            slug
-            internal {
-              type
-            }
-          }
-          ... on ContentfulNews {
-            id
-            title
-            lead {
-              lead
-            }
-            date
-            slug
-            internal {
-              type
-            }
-          }
-          ... on ContentfulJob {
-            id
-            title
-            lead {
-              lead
-            }
-            date
-            slug
-            internal {
-              type
-            }
-          }
-          ... on ContentfulPage {
-            id
-            title
-            lead {
-              lead
-            }
-            date
-            slug
-            internal {
-              type
-            }
-          }
-        }
-      }
+      #heroItems {
+      #  ... on Node {
+      #    ... on ContentfulPost {
+      #      id
+      #      title
+      #      lead {
+      #        lead
+      #      }
+      #      date
+      #      slug
+      #      internal {
+      #        type
+      #      }
+      #    }
+      #    ... on ContentfulNews {
+      #      id
+      #      title
+      #      lead {
+      #        lead
+      #      }
+      #      date
+      #      slug
+      #      internal {
+      #        type
+      #      }
+      #    }
+      #    ... on ContentfulJob {
+      #      id
+      #      title
+      #      lead {
+      #        lead
+      #      }
+      #      date
+      #      slug
+      #      internal {
+      #        type
+      #      }
+      #    }
+      #    ... on ContentfulPage {
+      #      id
+      #      title
+      #      lead {
+      #        lead
+      #      }
+      #      date
+      #      slug
+      #      internal {
+      #        type
+      #      }
+      #    }
+      #  }
+      #} 
       introduction {
         raw
       }
