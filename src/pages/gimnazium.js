@@ -140,7 +140,7 @@ const IskolaPageTemplate = ({ data }) => {
           {renderRichText(firstContent, introRichTextOptions)}
         </div>
 
-{/*     <Separator />
+      <Separator />
         {peopleList && (
           <>
             <SectionTitle
@@ -223,7 +223,7 @@ const IskolaPageTemplate = ({ data }) => {
             </div>
           </>
         )}
-       */}
+       
       </Content>
     </Layout>
   )
