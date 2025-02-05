@@ -54,7 +54,7 @@ const GimiseletPageTemplate = ({ data }) => {
 export default GimiseletPageTemplate
 
 export const pageQuery = graphql`
-  query gimiseletPageQuery {
+  query EletkepPageQuery {
     page: contentfulPage(slug: { eq: "gimiselet" }) {
       
       lead {
@@ -66,8 +66,8 @@ export const pageQuery = graphql`
       relatedContentTitle
 
     }
-    allContentfuleletkep(sort: { fields: date, order: DESC }) {
-      gimiselet: nodes {
+    allContentfulEletkep(sort: { fields: date, order: DESC }) {
+      eletkep: nodes {
         date
         slug
         title

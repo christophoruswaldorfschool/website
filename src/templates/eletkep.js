@@ -14,7 +14,7 @@ import React from 'react'
 
 const EletkepPageTemplate = ({ data }) => {
   const {
-    contentfuleletkep: { lead, title: eletkepTitle, content, eletkepPicture },
+    contentfulEletkep: { lead, title: eletkepTitle, content, eletkepPicture },
   } = data
 
   const imageIndexer = createImageIndexer()
@@ -27,7 +27,7 @@ const EletkepPageTemplate = ({ data }) => {
   }
 
   return (
-    <Layout menu="podium">
+    <Layout menu="highschool">
       <Seo title={eletkepTitle} description={lead?.lead ?? ''} />
       <Hero title={eletkepTitle} lead={lead?.lead ?? ' '} color="gold" />
       <Content>
@@ -50,8 +50,8 @@ const EletkepPageTemplate = ({ data }) => {
 export default EletkepPageTemplate
 
 export const pageQuery = graphql`
-  query eletkepBySlug($slug: String!) {
-    contentfuleletkep(slug: { eq: $slug }) {
+  query EletkepBySlug($slug: String!) {
+    contentfulEletkep(slug: { eq: $slug }) {
       lead {
         lead
       }
