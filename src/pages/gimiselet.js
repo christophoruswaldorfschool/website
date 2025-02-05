@@ -17,7 +17,7 @@ const GimiseletPageTemplate = ({ data }) => {
       lead: { lead },
       relatedContentTitle,
     },
-    allContentfulEletkep: { gimiselet },
+    allContentfulEletkep: { eletkepek },
   } = data
 
   return (
@@ -28,14 +28,14 @@ const GimiseletPageTemplate = ({ data }) => {
         <SectionTitle title={relatedContentTitle} align="right" color="peach" />
         <ContentList type="full">
           {gimiselet
-            /*.filter((item) => !!item.content)*/
+            .filter((item) => !!item.content)
             .map((item) => (
               <ContentBox
                 title={item.title}
                 type="full"
                 color="brick"
                 buttonText="Tovább"
-                buttonLink={`/gimiselet/${item.slug}`}
+                buttonLink={`/eletkep/${item.slug}`}
                 key={item.slug}
                 image={item.image}
               >
