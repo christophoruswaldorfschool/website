@@ -17,7 +17,7 @@ const GimiseletPageTemplate = ({ data }) => {
       lead: { lead },
       relatedContentTitle,
     },
-    allContentfulGimiselet: { Gimiselet },
+    allContentfulgimiselet: { gimiselet },
   } = data
 
   return (
@@ -51,7 +51,7 @@ const GimiseletPageTemplate = ({ data }) => {
   )
 }
 
-export default PodiumPageTemplate
+export default GimiseletPageTemplate
 
 export const pageQuery = graphql`
   query gimiseletPageQuery {
