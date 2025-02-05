@@ -21,7 +21,7 @@ const GimiseletPageTemplate = ({ data }) => {
   } = data
 
   return (
-    <Layout menu="highschool">
+    <Layout menu="gimiselet">
       <Seo title={title} description={lead} />
       <Hero title={title} lead={lead} color="pink" />
       <Content>
