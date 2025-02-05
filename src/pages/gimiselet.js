@@ -28,7 +28,7 @@ const GimiseletPageTemplate = ({ data }) => {
         <SectionTitle title={relatedContentTitle} align="right" color="peach" />
         <ContentList type="full">
           {gimiselet
-            .filter((item) => !!item.content)
+            /*.filter((item) => !!item.content)*/
             .map((item) => (
               <ContentBox
                 title={item.title}
