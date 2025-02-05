@@ -268,42 +268,6 @@ export const pageQuery = graphql`
       }
       relatedContent {
         ... on Node {
-          ... on ContentfulPost {
-            id
-            title
-            lead {
-              lead
-            }
-            date
-            slug
-            internal {
-              type
-            }
-          }
-          ... on ContentfulNews {
-            id
-            title
-            lead {
-              lead
-            }
-            date
-            slug
-            internal {
-              type
-            }
-          }
-          ... on ContentfulJob {
-            id
-            title
-            lead {
-              lead
-            }
-            date
-            slug
-            internal {
-              type
-            }
-          }
           ... on ContentfulPage {
             id
             title

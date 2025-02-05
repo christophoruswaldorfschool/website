@@ -19,6 +19,7 @@ import { graphql } from 'gatsby'
 /*import { StaticImage } from 'gatsby-plugin-image'*/
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import React from 'react'
+import createTable from '../utils/createTable'
 /*import truncate from 'truncate'*/
 
 /*const Quote = ({ children }) => {
