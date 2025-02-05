@@ -21,7 +21,7 @@ const GimiseletPageTemplate = ({ data }) => {
   } = data
 
   return (
-    <Layout menu="gimiselet">
+    <Layout menu="highschool">
       <Seo title={title} description={lead} />
       <Hero title={title} lead={lead} color="pink" />
       <Content>
@@ -55,7 +55,7 @@ export default GimiseletPageTemplate
 
 export const pageQuery = graphql`
   query EletkepPageQuery {
-    page: contentfulPage(slug: { eq: "gimiselet" }) {
+    page: contentfulPage(slug: { eq: "gimnazium" }) {
       
       lead {
         lead
