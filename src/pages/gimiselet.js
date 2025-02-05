@@ -17,7 +17,7 @@ const GimiseletPageTemplate = ({ data }) => {
       lead: { lead },
       relatedContentTitle,
     },
-    allContentfulgimiselet: { gimiselet },
+    allContentfulGimiselet: { gimiselet },
   } = data
 
   return (
