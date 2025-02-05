@@ -66,7 +66,7 @@ export const pageQuery = graphql`
       relatedContentTitle
 
     }
-    allContentfulgimiselet(sort: { fields: date, order: DESC }) {
+    allContentfuleletkep(sort: { fields: date, order: DESC }) {
       gimiselet: nodes {
         date
         slug
@@ -74,7 +74,7 @@ export const pageQuery = graphql`
         content {
           raw
         }
-        image: gimiseletPicture {
+        image: eletkepPicture {
           gatsbyImage(width: 488, placeholder: BLURRED, cropFocus: CENTER)
         }
       }
