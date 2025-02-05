@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+/*import {useEffect, useState} from 'react';
 import Papa from papaparse;
 import useFetch from './utils/useFetch'
 
@@ -12,4 +12,4 @@ useEffect(()=> {
 
 return data
 
-export default createTable
+export default createTable */
