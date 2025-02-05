@@ -54,7 +54,7 @@ const GimiseletPageTemplate = ({ data }) => {
 export default PodiumPageTemplate
 
 export const pageQuery = graphql`
-  query GimiseletPageQuery {
+  query gimiseletPageQuery {
     page: contentfulPage(slug: { eq: "gimiselet" }) {
       
       lead {
@@ -66,7 +66,7 @@ export const pageQuery = graphql`
       relatedContentTitle
 
     }
-    allContentfulGimiselet(sort: { fields: date, order: DESC }) {
+    allContentfulgimiselet(sort: { fields: date, order: DESC }) {
       gimiselet: nodes {
         date
         slug
