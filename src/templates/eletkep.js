@@ -27,7 +27,7 @@ const EletkepPageTemplate = ({ data }) => {
   }
 
   return (
-    <Layout menu="highschool">
+    <Layout menu="gimiselet">
       <Seo title={eletkepTitle} description={lead?.lead ?? ''} />
       <Hero title={eletkepTitle} lead={lead?.lead ?? ' '} color="gold" />
       <Content>
