@@ -55,7 +55,7 @@ export default GimiseletPageTemplate
 
 export const pageQuery = graphql`
   query EletkepPageQuery {
-    page: contentfulPage(slug: { eq: "gimnazium" }) {
+    page: contentfulPage(slug: { eq: "gimiselet" }) {
       
       lead {
         lead
