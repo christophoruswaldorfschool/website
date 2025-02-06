@@ -105,7 +105,7 @@ const IskolaPageTemplate = ({ data }) => {
               title={relatedContentTitle}
               align="right"
               color="lilac"
-              anchor="aktualitasok"
+              anchor="gimiselet"
             />
 
             <ContentList>
@@ -223,7 +223,7 @@ const IskolaPageTemplate = ({ data }) => {
             </div>
           </>
         )}
-       
+        
       </Content>
     </Layout>
   )
@@ -268,42 +268,6 @@ export const pageQuery = graphql`
       }
       relatedContent {
         ... on Node {
-          ... on ContentfulPost {
-            id
-            title
-            lead {
-              lead
-            }
-            date
-            slug
-            internal {
-              type
-            }
-          }
-          ... on ContentfulNews {
-            id
-            title
-            lead {
-              lead
-            }
-            date
-            slug
-            internal {
-              type
-            }
-          }
-          ... on ContentfulJob {
-            id
-            title
-            lead {
-              lead
-            }
-            date
-            slug
-            internal {
-              type
-            }
-          }
           ... on ContentfulPage {
             id
             title

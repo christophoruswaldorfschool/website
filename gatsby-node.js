@@ -138,6 +138,27 @@ const createEloadas = async (graphql, createPage, reporter) => runQuery(
   createPage
 )
 
+const createEletkep = async (graphql, createPage, reporter) => runQuery(
+  {
+    query: `
+      {
+        collection: allContentfulEletkep {
+          nodes {
+            slug
+            contentful_id
+          }
+        }
+      }
+    `,
+    errorMessage: `There was an error loading events`,
+    rootPath: 'eletkepek',
+    component: path.resolve('./src/templates/eletkep.js'),
+  },
+  graphql,
+  reporter,
+  createPage
+)
+
 const createGalleries = async (graphql, createPage, reporter) => runQuery(
   {
     query: `
@@ -191,6 +212,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       createGalleries(graphql, createPage, reporter),
       createNews(graphql, createPage, reporter),
       createEloadas(graphql, createPage, reporter),
+      createEletkep(graphql, createPage, reporter),
     ]);
   } catch(e) {
     console.log(e)
