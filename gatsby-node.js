@@ -212,6 +212,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       createGalleries(graphql, createPage, reporter),
       createNews(graphql, createPage, reporter),
       createEloadas(graphql, createPage, reporter),
+      createEletkep(graphql, createPage, reporter),
     ]);
   } catch(e) {
     console.log(e)
