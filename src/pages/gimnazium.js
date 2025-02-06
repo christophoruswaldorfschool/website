@@ -105,7 +105,7 @@ const IskolaPageTemplate = ({ data }) => {
               title={relatedContentTitle}
               align="right"
               color="lilac"
-              anchor="aktualitasok"
+              anchor="gimiselet"
             />
 
             <ContentList>
@@ -140,7 +140,7 @@ const IskolaPageTemplate = ({ data }) => {
           {renderRichText(firstContent, introRichTextOptions)}
         </div>
 
-{/*     <Separator />
+      <Separator />
         {peopleList && (
           <>
             <SectionTitle
@@ -223,7 +223,7 @@ const IskolaPageTemplate = ({ data }) => {
             </div>
           </>
         )}
-       */}
+
       </Content>
     </Layout>
   )

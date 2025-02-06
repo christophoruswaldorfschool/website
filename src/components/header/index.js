@@ -69,6 +69,14 @@ const Header = ({ activeMenu, searchEnabled = false }) => (
             })}
           >
             <Link to="/gimnazium">Gimnázium</Link>
+            <ul className={css.subMenu}>
+              <li>
+                <Link to="/gimiselet">Gimis Élet</Link>
+              </li>
+              <li>
+                <Link to="/gimnazium#pedagogusaink">Pedagógusaink</Link>
+              </li>
+            </ul>
           </li>
           {/* <li className={css.menuItem}>
             <a href="https://wokk.hu/">Óvoda</a>
