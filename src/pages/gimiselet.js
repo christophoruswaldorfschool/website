@@ -27,7 +27,7 @@ const GimiseletPageTemplate = ({ data }) => {
       <Content>
         <SectionTitle title={relatedContentTitle} align="right" color="peach" />
         <ContentList type="full">
-          {gimiselet
+          {eletkepek
             .filter((item) => !!item.content)
             .map((item) => (
               <ContentBox
