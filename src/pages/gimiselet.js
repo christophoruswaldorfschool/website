@@ -74,7 +74,7 @@ export const pageQuery = graphql`
         content {
           raw
         }
-        image: EletkepPicture {
+        image: eletkepPicture {
           gatsbyImage(width: 488, placeholder: BLURRED, cropFocus: CENTER)
         }
       }
