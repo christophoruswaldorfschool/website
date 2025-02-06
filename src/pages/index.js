@@ -277,7 +277,7 @@ export const pageQuery = graphql`
             }
           }
         }
-      }
+      } 
       introduction {
         raw
       }

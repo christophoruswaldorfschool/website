@@ -223,7 +223,7 @@ const IskolaPageTemplate = ({ data }) => {
             </div>
           </>
         )}
-
+        
       </Content>
     </Layout>
   )
