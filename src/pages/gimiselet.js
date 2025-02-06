@@ -52,7 +52,7 @@ const GimiseletPageTemplate = ({ data }) => {
 }
 
 export default GimiseletPageTemplate
-/*
+
 export const pageQuery = graphql`
   query EletkepPageQuery {
     page: contentfulPage(slug: { eq: "gimis-elet" }) {
@@ -81,4 +81,3 @@ export const pageQuery = graphql`
     }
   }
 `
-*/
