@@ -35,7 +35,7 @@ const GimiseletPageTemplate = ({ data }) => {
                 type="full"
                 color="brick"
                 buttonText="Tovább"
-                buttonLink={`/eletkep/${item.slug}`}
+                buttonLink={`/eletkepek/${item.slug}`}
                 key={item.slug}
                 image={item.image}
               >
