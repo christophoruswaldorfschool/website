@@ -67,7 +67,7 @@ export const pageQuery = graphql`
 
     }
     allContentfulEletkep(sort: { fields: date, order: DESC }) {
-      eletkep: nodes {
+      eletkepek: nodes {
         date
         slug
         title
