@@ -25,7 +25,7 @@ const GimiseletPageTemplate = ({ data }) => {
       <Seo title={title} description={lead} />
       <Hero title={title} lead={lead} color="pink" />
       <Content>
-        <SectionTitle title={relatedContentTitle} align="right" color="peach" />
+        <SectionTitle title={relatedContentTitle} align="right" color="lilac" />
         <ContentList type="full">
           {eletkepek
             .filter((item) => !!item.content)
@@ -74,7 +74,7 @@ export const pageQuery = graphql`
         content {
           raw
         }
-        image: eletkepPicture {
+        image: EletkepPicture {
           gatsbyImage(width: 488, placeholder: BLURRED, cropFocus: CENTER)
         }
       }
