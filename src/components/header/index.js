@@ -71,7 +71,7 @@ const Header = ({ activeMenu, searchEnabled = false }) => (
             <Link to="/gimnazium">Gimnázium</Link>
             <ul className={css.subMenu}>
               <li>
-                <Link to="/gimiselet">Gimis Élet</Link>
+                <Link to="/gimis-elet">Gimnáziumi Élet</Link>
               </li>
               <li>
                 <Link to="/gimnazium#pedagogusaink">Pedagógusaink</Link>
